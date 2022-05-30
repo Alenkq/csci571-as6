@@ -4,6 +4,9 @@
         <title>As6</title>
         <link href="../static/css/a6sstyles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script src="../static/js/jquery-3.6.0.min.js"></script>
+        <script src="../static/js/a6sjs.js"></script>
+        <script src="../static/js/loading1_ajax.js"></script>
     </head>
 
     <body>
@@ -12,20 +15,35 @@
         </div>
 
         <div class="search-bar-box">
-            <form>
+            <form name="searching" onsubmit="loading1();">
                 <div class="search-button">
                     <button type="submit"></button>
                 </div>
     
                 <div class="search-bar">
-                    <input type="text" placeholder="Please enter an artist name." required>
+                    <input name="search-info" id="search-info" type="text" placeholder="Please enter an artist name." required>
                 </div>
+
                 <div class="clear-button">
                     <button type="reset" formnovalidate></button>
                 </div>
             </form>
             
         </div>
+
+        <div class="loading-area1">
+            <div class="loading-gif1" id="loading-gif1"></div>
+        </div>
+
+        <div class="album-area">
+            <div class="nofound" id="nofound">
+                <div class="text">
+                    <a>No results found.</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="aaaaaa"></div>
 
         <div class="footer">
             <div class="text">
