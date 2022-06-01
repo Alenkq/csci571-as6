@@ -1,5 +1,4 @@
-from flask import Flask, render_template, jsonify
-from flask import request
+from flask import Flask, current_app, request
 import requests
 import json
 import time
@@ -8,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('j1a1c7ka6s.html')
+    return current_app.send_static_file('j1a1c7ka6s.html')
 
 @app.route('/searching', methods=['GET'])
 def searching():
@@ -29,8 +28,8 @@ def searching():
     search_resp = requests.get(search_url, headers= search_header)
     search_json = search_resp.json()
 
-    with open('../data.json', 'w') as f:
-        json.dump(search_json, f)
+    # with open('../data.json', 'w') as f:
+    #     json.dump(search_json, f)
 
     return search_json
 

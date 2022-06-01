@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('form').submit(function (event) { 
+    $('.searching').submit(function (event) { 
         $.get("/searching", {info: $('#search-info').val()}).done(function (data) { 
 
             document.getElementById("loading-gif1").style.display = "none";
@@ -8,9 +8,12 @@ $(document).ready(function () {
             var results_length = Object.keys(searching_results).length;
 
             if (results_length == 0) {
+                document.getElementById("album").style.display = "none";
                 document.getElementById("nofound").style.display = "block";
             } else {
                 document.getElementById("nofound").style.display = "none";
+                document.getElementById("album").style.display = "flex";
+
                 var results_filter = new Array();
 
                 for (var i = 0; i < results_length; i++) {
@@ -29,6 +32,8 @@ $(document).ready(function () {
 
                 for (const element of results_filter) {
                     var img_link = '';
+                    var aid = element[1].substring(element[1].lastIndexOf("/") + 1, element[1].length);
+
                     if (element[2] == '/assets/shared/missing_image.png') {
                         img_link = img_link + '../static/artsy_logo.svg';
                     } else {
@@ -37,19 +42,18 @@ $(document).ready(function () {
 
                     htmlCode = htmlCode + 
 
-                    `<div class="card">
-                        <a href="${element[1]}">
-                            <div>
-                                <div class="card-img">
-                                    <img src="${img_link}">
-                                </div>
-
+                    `
+                    <div class="card">
+                        <button type="submit" name="aid" value="${aid}">
+                            <div class="button-box">
+                                <img src="${img_link}">
                                 <div class="card-title">
                                     ${element[0]}
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </div>`;
+
                 }
                 
                 var album = document.querySelector('.album');

@@ -181,41 +181,56 @@ body {
     overflow-y: hidden;
 }
 
-.album-area .album a {
+.album-area .album .card {
+    height: 270px;
+    margin-right: 10px;
+    flex: 0 0 210px;
+    background-color: #205375;
+    text-align: center;
+}
+
+.album-area .album .card button {
+    padding: 0;
+    border: none;
+    background: none;
+    width: 210px;
+    height: 270px;
+    cursor: pointer;
+}
+
+/* .album-area .album a {
     margin: 0;
     padding: 0;
     border: 0;
     text-decoration: none;
 }
 
-.album-area .album .card {
-    width: 190px;
+.album-area .album .card:hover {
+    background-color: #112B3C;
+}
+
+.album-area .album .card:focus {
+    background-color: #112B3C;
+} */
+
+.album-area .album .card button .button-box {
+    width: 210px;
     height: 270px;
-    margin-right: 10px;
-    flex: 0 0 210px;
-    /* border: 1px solid yellow; */
-    cursor: pointer;
-    background-color: #205375;
-    text-align: center;
 }
 
-.album-area .album .card .card-img {
-    margin: auto;
-    margin-top: 15px;
-}
-
-.album-area .album .card .card-img img{
+.album-area .album .card button .button-box img{
     width: 190px;
     height: 190px;
     border-radius: 50%;
     border-width: 4px;
     border-color: white;
     border-style: solid;
+    margin-top: 13px;
 }
 
-.album-area .album .card .card-title {
+.album-area .album .card button .card-title {
     margin: auto;
-    margin-top: 1px;
+    margin-top: 10px;
     color: white;
     font-size: large;
     font-weight: lighter;
