@@ -26,9 +26,10 @@ body {
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    /* position: absolute; */
+    margin-top: 40px;
+    /* left: 0;
+    bottom: 0; */
     width: 100%;
     height: 35px;
     color: white;
@@ -202,7 +203,7 @@ body {
     background-color: #112B3C;
 }
 
-.album-area .album .card:focus {
+.album-area .album .card:focus-within {
     background-color: #112B3C;
 }
 
