@@ -29,6 +29,35 @@ $(document).ready(function () {
                     }
                 }
 
+                var htmlCode = '';
+
+                for (const element of results_filter) {
+                    var img_link = '';
+                    if (element[2] == '/assets/shared/missing_image.png') {
+                        img_link = img_link + '../static/artsy_logo.svg';
+                    } else {
+                        img_link = img_link + element[2];
+                    }
+
+                    htmlCode = htmlCode + 
+
+                    `<div class="card">
+                        <a href="${element[1]}">
+                            <div>
+                                <div class="card-img">
+                                    <img src="${img_link}">
+                                </div>
+
+                                <div class="card-title">
+                                    ${element[0]}
+                                </div>
+                            </div>
+                        </a>
+                    </div>`;
+                }
+                
+                var album = document.querySelector('.album');
+                album.innerHTML = htmlCode;
                 // $('#aaaaaa').text(results_filter).show();
             }
         });

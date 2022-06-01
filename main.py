@@ -20,7 +20,7 @@ def searching():
     auth_dict = json.loads(auth_resp.text)
     XAPP = auth_dict['token']
 
-    time.sleep(2)
+    # time.sleep(2)
     search_url = 'https://api.artsy.net/api/search?q=%s&size=10'
     search_text = search_text.replace(' ', '+')
     search_url = search_url % search_text
