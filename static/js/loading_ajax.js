@@ -1,7 +1,11 @@
 $(document).ready(function () {
-    $('form').submit(function (event) { 
-        $.get("/searching", {info: $('#search-info').val()}).done(function (data) { 
-
+    $('form').on('submit', function (event) {
+        $.ajax({
+            type: "POST",
+            url: "/searching",
+            data: {info: $('#search-info').val()},
+        })
+        .done(function(data) {
             document.getElementById("loading-gif1").style.display = "none";
             // $('#aaaaaa').text(data._embedded.results.length).show();
             var searching_results = data._embedded.results;
@@ -56,9 +60,8 @@ $(document).ready(function () {
                 album.innerHTML = htmlCode;
                 // $('#aaaaaa').text(results_filter).show();
             }
-         });
+        });
 
         event.preventDefault();
-        
     });
 });

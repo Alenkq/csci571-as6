@@ -10,10 +10,11 @@ app = Flask(__name__)
 def index():
     return render_template('j1a1c7ka6s.html')
 
-@app.route('/searching', methods=['POST'])
+@app.route('/searching', methods=['GET'])
 def searching():
 
-    search_text = request.form['info']
+    # search_text = request.form['info']
+    search_text = request.args.get('info')
     auth_url = 'https://api.artsy.net/api/tokens/xapp_token'
     auth_para = {'client_id': '1ced6e79290f0e7f54ee', 'client_secret': '004b92f37b09786daf4cbd6935e15e48'}
     auth_resp = requests.post(auth_url, data= auth_para)
@@ -32,8 +33,6 @@ def searching():
         json.dump(search_json, f)
 
     return search_json
-    # search_json = {'info': search_text}
-    # return jsonify(search_json)
 
 if __name__ == '__main__':
     app.run(host= '127.0.0.1', port= 8080, debug= True)
