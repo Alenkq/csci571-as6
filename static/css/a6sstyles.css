@@ -198,20 +198,13 @@ body {
     cursor: pointer;
 }
 
-/* .album-area .album a {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-decoration: none;
-}
-
 .album-area .album .card:hover {
     background-color: #112B3C;
 }
 
 .album-area .album .card:focus {
     background-color: #112B3C;
-} */
+}
 
 .album-area .album .card button .button-box {
     width: 210px;
@@ -234,4 +227,26 @@ body {
     color: white;
     font-size: large;
     font-weight: lighter;
+}
+
+.details-area {
+    margin: auto;
+    margin-top: 25px;
+    width: 700px;
+    height: 450px;
+    border: 1px solid red;
+}
+
+.details-area .loading-area2 {
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid blue; */
+}
+
+.details-area .loading-area2 .loading-gif2 {
+    width: 100%;
+    height: 50px;
+    display: none;
+    background: url('../loading.gif') no-repeat center;
+    background-size: 70px 70px;
 }

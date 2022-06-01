@@ -7,6 +7,7 @@
         <script src="../static/js/jquery-3.6.0.min.js"></script>
         <script src="../static/js/a6sjs.js"></script>
         <script src="../static/js/loading1_ajax.js"></script>
+        <script src="../static/js/loading2_ajax.js"></script>
     </head>
 
     <body>
@@ -42,18 +43,15 @@
                 </div>
             </div>
 
-            <form class="album" id="album">
-                <!-- <div class="card">
-                    <button type="submit" name="aid" value="${aid}">
-                        <div class="button-box">
-                            <img src="../static/artsy_logo.svg">
-                            <div class="card-title">
-                                aaaaaa
-                            </div>
-                        </div>
-                    </button>
-                </div> -->
-            </form>
+            <form class="album" id="album" onsubmit="loading2();"></form>
+        </div>
+        
+        
+        <div class="details-area">
+            <div class="loading-area2">
+                <div class="loading-gif2" id="loading-gif2"></div>
+            </div>
+            <div class="details-box"></div>
         </div>
 
         <div id="aaaaaa"></div>
