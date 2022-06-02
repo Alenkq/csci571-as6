@@ -269,13 +269,18 @@ body {
     font-size: large;
 }
 
+.details-area .details-box .atitle .ap2 {
+    font-size: medium;
+}
+
 .details-area .details-box p {
     margin: 0px;
 }
 
-.details-area .details-box p a {
+.details-area .details-box p a{
     font-size: smaller;
     display: inline-block;
     font-weight: normal;
+    line-height: 95%;
     /* letter-spacing: -1px; */
 }
