@@ -233,7 +233,7 @@ body {
 .details-area {
     margin: auto;
     margin-top: 25px;
-    width: 700px;
+    width: 730px;
     height: 450px;
     border: 1px solid red;
 }
@@ -241,13 +241,41 @@ body {
 .details-area .loading-area2 {
     width: 100%;
     height: 50px;
+    display: none;
     /* border: 1px solid blue; */
 }
 
 .details-area .loading-area2 .loading-gif2 {
     width: 100%;
     height: 50px;
-    display: none;
     background: url('../loading.gif') no-repeat center;
     background-size: 70px 70px;
+}
+
+.details-area .details-box {
+    text-align: justify;
+}
+
+/* .details-area .details-box p {
+    margin: -1px;
+} */
+
+.details-area .details-box .atitle {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.details-area .details-box .atitle .ap1 {
+    font-size: large;
+}
+
+.details-area .details-box p {
+    margin: 0px;
+}
+
+.details-area .details-box p a {
+    font-size: smaller;
+    display: inline-block;
+    font-weight: normal;
+    /* letter-spacing: -1px; */
 }
