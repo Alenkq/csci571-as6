@@ -5,11 +5,13 @@ import time
 
 app = Flask(__name__)
 
-auth_url = 'https://api.artsy.net/api/tokens/xapp_token'
-auth_para = {'client_id': '1ced6e79290f0e7f54ee', 'client_secret': '004b92f37b09786daf4cbd6935e15e48'}
-auth_resp = requests.post(auth_url, data= auth_para)
-auth_dict = json.loads(auth_resp.text)
-XAPP = auth_dict['token']
+# auth_url = 'https://api.artsy.net/api/tokens/xapp_token'
+# auth_para = {'client_id': '1ced6e79290f0e7f54ee', 'client_secret': '004b92f37b09786daf4cbd6935e15e48'}
+# auth_resp = requests.post(auth_url, data= auth_para)
+# auth_dict = json.loads(auth_resp.text)
+# XAPP = auth_dict['token']
+# with open('../token.txt', 'w') as f:
+#     f.write(XAPP)
 
 @app.route('/')
 def index():
@@ -17,6 +19,12 @@ def index():
 
 @app.route('/searching', methods= ['GET'])
 def searching():
+    auth_url = 'https://api.artsy.net/api/tokens/xapp_token'
+    auth_para = {'client_id': '1ced6e79290f0e7f54ee', 'client_secret': '004b92f37b09786daf4cbd6935e15e48'}
+    auth_resp = requests.post(auth_url, data= auth_para)
+    auth_dict = json.loads(auth_resp.text)
+    XAPP = auth_dict['token']
+
 
     # search_text = request.form['info']
     search_text = request.args.get('info')
@@ -36,6 +44,13 @@ def searching():
 
 @app.route('/searching_details', methods= ['GET'])
 def searching_details():
+    
+    auth_url = 'https://api.artsy.net/api/tokens/xapp_token'
+    auth_para = {'client_id': '1ced6e79290f0e7f54ee', 'client_secret': '004b92f37b09786daf4cbd6935e15e48'}
+    auth_resp = requests.post(auth_url, data= auth_para)
+    auth_dict = json.loads(auth_resp.text)
+    XAPP = auth_dict['token']
+
     search_aid = request.args.get('aid')
     
     search_url = 'https://api.artsy.net/api/artists/'
