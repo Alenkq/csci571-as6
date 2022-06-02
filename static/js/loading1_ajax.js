@@ -2,6 +2,8 @@ $(document).ready(function () {
     $('.searching').submit(function (event) { 
         $.get("/searching", {info: $('#search-info').val()}).done(function (data) { 
 
+            document.getElementById("album").style.display = "flex";
+            document.getElementById("loading-gif2").style.display = "none";
             document.getElementById("loading-gif1").style.display = "none";
             // $('#aaaaaa').text(data._embedded.results.length).show();
             var searching_results = data._embedded.results;
@@ -29,10 +31,13 @@ $(document).ready(function () {
                 }
 
                 var htmlCode = '';
+                var count = 0;
 
                 for (const element of results_filter) {
                     var img_link = '';
                     var aid = element[1].substring(element[1].lastIndexOf("/") + 1, element[1].length);
+                    var count_s = 'aid' + count.toString();
+                    var count_c = 'card' + count.toString();
 
                     if (element[2] == '/assets/shared/missing_image.png') {
                         img_link = img_link + '../static/artsy_logo.svg';
@@ -43,8 +48,8 @@ $(document).ready(function () {
                     htmlCode = htmlCode + 
 
                     `
-                    <div class="card">
-                        <button type="submit" name="aid" value="${aid}">
+                    <div class="card" id="${count_c}">
+                        <button type="submit" name="aid" id="${count_s}" value="${aid}" onclick="set_card_color(this);">
                             <div class="button-box">
                                 <img src="${img_link}">
                                 <div class="card-title">
@@ -53,6 +58,8 @@ $(document).ready(function () {
                             </div>
                         </button>
                     </div>`;
+
+                    count = count + 1;
 
                 }
                 
