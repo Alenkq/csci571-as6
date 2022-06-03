@@ -185,6 +185,7 @@ body {
 .album-area .album .card {
     /* height: 300px; */
     margin-right: 10px;
+    margin-bottom: 20px;
     flex: 0 0 210px;
     /* background-color: #205375; */
     text-align: center;
