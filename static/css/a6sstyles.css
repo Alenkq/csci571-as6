@@ -151,7 +151,7 @@ body {
 .album-area {
     margin: auto;
     width: 950px;
-    height: 270px;
+    /* height: 270px; */
     /* border: 1px solid blue; */
 }
 
@@ -176,18 +176,19 @@ body {
 
 .album-area .album {
     width: auto;
-    height: 290px;
+    /* height: 300px; */
     display: none;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
 .album-area .album .card {
-    height: 270px;
+    /* height: 300px; */
     margin-right: 10px;
     flex: 0 0 210px;
     /* background-color: #205375; */
     text-align: center;
+    display: flex;
 }
 
 .album-area .album .card button {
@@ -196,8 +197,10 @@ body {
     /* background: none; */
     background-color: #205375;
     width: 210px;
-    height: 270px;
+    /* height: 270px; */
     cursor: pointer;
+    overflow: auto;
+    display: flex;
 }
 
 /* .album-area .album .card:hover {
@@ -217,7 +220,9 @@ body {
 
 .album-area .album .card button .button-box {
     width: 210px;
-    height: 270px;
+    /* height: 270px; */
+    height: max-content;
+    /* display: flex; */
 }
 
 .album-area .album .card button .button-box img{
@@ -233,6 +238,8 @@ body {
 .album-area .album .card button .card-title {
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 20px;
+    width: 190px;
     color: white;
     font-size: large;
     font-weight: lighter;
