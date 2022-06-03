@@ -30,7 +30,7 @@ $(document).ready(function () {
                     }
                 }
 
-                var htmlCode = '';
+                // var htmlCode = '';
                 var count = 0;
 
                 var album_origin = document.getElementById('album');
