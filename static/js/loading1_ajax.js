@@ -8,8 +8,17 @@ $(document).ready(function () {
             // $('#aaaaaa').text(data._embedded.results.length).show();
             var searching_results = data._embedded.results;
             var results_length = Object.keys(searching_results).length;
+            var signal = 0;
 
-            if (results_length == 0) {
+            for (var i = 0; i < results_length; i++) {
+                var check_value = searching_results[i];
+
+                if (check_value.og_type == "artist") {
+                    signal = 1;
+                }
+            };
+
+            if (results_length == 0 || signal == 0) {
                 document.getElementById("album").style.display = "none";
                 document.getElementById("nofound").style.display = "block";
             } else {
@@ -131,7 +140,7 @@ $(document).ready(function () {
                 // var album = document.querySelector('.album');
                 // album.innerHTML = htmlCode;
                 // $('#aaaaaa').text(results_filter).show();
-            }
+            };
          });
 
         event.preventDefault();

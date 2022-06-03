@@ -105,16 +105,19 @@ body {
 }
 
 .search-bar-box input {
-    color: gray;
+    /* color: gray; */
     width: 475px;
     height: 35px;
     border: none;
     padding: 0;
 }
 
+.search-bar-box input::placeholder {
+    color: gray;
+}
+
 .search-bar-box input:focus {
     outline: none;
-    color: #000;
 }
 
 .search-bar-box .clear-button {
@@ -151,7 +154,7 @@ body {
 .album-area {
     margin: auto;
     width: 950px;
-    /* height: 270px; */
+    height: 330px;
     /* border: 1px solid blue; */
 }
 
