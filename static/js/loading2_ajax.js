@@ -5,11 +5,32 @@ $(document).ready(function () {
             document.getElementById("loading-gif2").style.display = "none";
             document.getElementById("details-box").style.display = 'block';
 
-            var a_name = data.name;
-            var a_birthday = data.birthday;
-            var a_deadthday = data.deathday;
-            var a_nationality = data.nationality;
-            var a_biography = data.biography;
+            var a_name = '';
+            var a_birthday = '';
+            var a_deadthday = '';
+            var a_nationality = '';
+            var a_biography = '';
+
+            if (data.name) {
+                a_name = data.name;
+            };
+
+            if (data.birthday) {
+                a_birthday = data.birthday;
+            };
+
+            if (data.deathday) {
+                a_deadthday = data.deathday;
+            };
+
+            if (data.nationality) {
+                a_nationality = data.nationality;
+            };
+
+            if (data.biography) {
+                a_biography = data.biography;
+            };
+
             // var htmlCode = '';
             var details_box_origin = document.getElementById('details-box');
 

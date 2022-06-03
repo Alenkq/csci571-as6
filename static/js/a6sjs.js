@@ -4,16 +4,21 @@ function loading1(){
     var album_css = getComputedStyle(document.querySelector('.album'));
     var nofound_css = getComputedStyle(document.querySelector('.nofound'));
 
-    if (album_css.display == 'flex' || nofound_css.display == 'block') {
-        var detailsbox_css = getComputedStyle(document.querySelector('.details-box'));
+    if (album_css.display == 'flex') {
+        // var detailsbox_css = getComputedStyle(document.querySelector('.details-box'));
 
-        if (detailsbox_css.display == 'none') {
-            document.getElementById("loading-gif1").style.display = "block";
-        } else {
-            document.getElementById("details-box").style.display = "none";
-            document.getElementById("loading-gif2").style.display = "block";
-        }
+        // if (detailsbox_css.display == 'none') {
+        //     document.getElementById("loading-gif1").style.display = "block";
+        // } else {
+        //     document.getElementById("details-box").style.display = "none";
+        //     document.getElementById("loading-gif2").style.display = "block";
+        // }
 
+        document.getElementById("details-box").style.display = "none";
+        document.getElementById("loading-gif2").style.display = "block";
+
+    } else if (nofound_css.display == 'block') {
+        document.getElementById("loading-gif1").style.display = "block";
     } else {
         document.getElementById("loading-gif1").style.display = "block";
     }

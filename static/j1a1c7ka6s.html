@@ -12,44 +12,44 @@
     </head>
 
     <body>
-        <div class="header">
-            <a class="logo">Artist Search</a>
-        </div>
+        <div class="content">
 
-        <form class="searching" name="searching" onsubmit="loading1();">
-            <button type="submit" onclick="searching_bar_click();" id="searching-b" class="searching-button"></button>
-
-            <input class="search-bar" name="search-info" id="search-info" type="text" placeholder="Please enter an artist name." autocomplete="off" required>
-
-            <button class="clear-button" type="reset" formnovalidate onclick="searching_bar_click();"></button>
-        </form>
+            <div class="header">
+                <a class="logo">Artist Search</a>
+            </div>
+    
+            <form class="searching" name="searching" onsubmit="loading1();">
+                <button type="submit"id="searching-b" class="searching-button"></button>
+    
+                <input class="search-bar" name="search-info" id="search-info" type="text" placeholder="Please enter an artist name." autocomplete="off" required>
+    
+                <button class="clear-button" type="reset" formnovalidate></button>
+            </form>
+                
+            <div class="loading-area1">
+                <div class="loading-gif1" id="loading-gif1"></div>
+            </div>
+    
+            <div class="album-area">
+                <div class="nofound" id="nofound">
+                    <div class="text">
+                        <a>No results found.</a>
+                    </div>
+                </div>
+    
+                <form class="album" id="album" onsubmit="loading2();"></form>
+            </div>
             
-        <div class="loading-area1">
-            <div class="loading-gif1" id="loading-gif1"></div>
-        </div>
-
-        <div class="album-area">
-            <div class="nofound" id="nofound">
-                <div class="text">
-                    <a>No results found.</a>
+            <div class="details-area" id="details-area">
+                <div class="loading-area2"  id="loading-gif2">
+                    <div class="loading-gif2"></div>
+                </div>
+    
+                <div class="details-box" id="details-box">
+                    <p><a id="a-bio"></a></p>
                 </div>
             </div>
-
-            <form class="album" id="album" onsubmit="loading2();"></form>
         </div>
-        
-        
-        <div class="details-area" id="details-area">
-            <div class="loading-area2"  id="loading-gif2">
-                <div class="loading-gif2"></div>
-            </div>
-
-            <div class="details-box" id="details-box">
-                <p><a id="a-bio"></a></p>
-            </div>
-        </div>
-
-        <div id="aaaaaa"></div>
 
         <div class="footer">
             <a href="https://www.artsy.net">                
