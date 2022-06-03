@@ -54,73 +54,62 @@ body {
     font-weight: 300;
 }
 
-.search-bar-box {
-    /* margin-top: 50px;
-    margin-left: 25%; */
+.searching {
     margin: auto;
     margin-top: 50px;
-    width: 570px;
+    width: 560px;
     height: 35px;
-    border: 1px solid #000;
-    border-radius: 15px;
+    position: relative;
 }
 
-.search-bar-box:focus-within {
-    border-color: orange;
-}
-
-.search-bar-box .search-button {
-    /* margin: auto;
-    margin-top: 50px; */
-    margin-left: 10px;
+.searching .searching-button {
+    position: absolute;
+    left: 10px;
+    top: 3px;
     float: left;
-    width: 35px;
-    height: 35px;
-    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
     background-image: url('../search_icon.png');
     background-size: 25px 25px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: white;
     opacity: 0.3;
+    padding: 0;
+    border: none;
 }
 
-.search-bar-box .search-button:hover {
+.searching .searching-button:hover {
     opacity: 1;
 }
 
-.search-bar-box button {
-    padding: 0;
-    border: none;
-    background: none;
-    width: 35px;
-    height: 35px;
-}
-
-.search-bar-box .search-bar {
-    float: left;
-    padding-left: 5px;
+.searching .search-bar {
     width: 475px;
     height: 35px;
+    border: none;
+    /* padding-left: 40px; */
+    padding: 0 40px 0 40px;
+    border: 2px solid #000;
+    border-radius: 15px;
     /* border: 1px solid blue; */
 }
 
-.search-bar-box input {
-    /* color: gray; */
-    width: 475px;
-    height: 35px;
-    border: none;
-    padding: 0;
-}
-
-.search-bar-box input::placeholder {
+.searching .search-bar::placeholder {
     color: gray;
 }
 
-.search-bar-box input:focus {
-    outline: none;
+.searching .search-bar:focus {
+    outline: inherit;
 }
 
-.search-bar-box .clear-button {
+.searching .search-bar:focus-within {
+    border-color: orange;
+}
+
+.searching .clear-button {
+    position: absolute;
+    right: 7px;
+    top: 1px;
     margin-right: 10px;
     float: right;
     width: 35px;
@@ -130,10 +119,12 @@ body {
     background-size: 15px 15px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: white;
+    border: none;
     opacity: 0.3;
 }
 
-.search-bar-box .clear-button:hover {
+.searching .clear-button:hover {
     opacity: 1;
 }
 
@@ -181,7 +172,7 @@ body {
     width: auto;
     /* height: 300px; */
     display: none;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
 }
 

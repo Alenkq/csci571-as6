@@ -25,15 +25,22 @@ function loading2(){
     document.getElementById("loading-gif2").style.display = "block";
 }
 
-function searching_bar_click(){
-    document.getElementById("search-bar-box").style.borderColor = "black";
-
-    $(document).ready(function () {
-        $(".search-bar-box").focusin(function(){
-            $(this).css("border-color", "orange");
-          });
-    });
-}
+// function searching_bar_click(){
+//     document.getElementById("search-bar-box").style.borderColor = "black";
+//     $(document).ready(function () {
+//         $("#search-bar-box").removeClass('border-color');
+//     });
+    
+//     $(document).ready(function () {
+//         $(".search-bar-box").focusin(function(){
+//             $(this).css("border-color", "orange");
+//           }).focusout(
+//               function(){
+//                 $(this).css("border-color", "black");
+//               }
+//           );
+//     });
+// }
 
 // function set_card_color(elem){
 //     $(document).ready(function () {
