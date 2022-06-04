@@ -117,7 +117,7 @@ body {
 
 .searching .clear-button {
     position: absolute;
-    right: 14px;
+    right: 6px;
     top: 2px;
     float: right;
     width: 35px;
@@ -127,6 +127,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: white;
+    border-radius: 50%;
     border: none;
     opacity: 0.3;
 }
